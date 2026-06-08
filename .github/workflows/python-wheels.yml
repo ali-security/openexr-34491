@@ -4,6 +4,7 @@
 name: Python Wheels
 
 on:
+  workflow_dispatch:
 
   # Run on all changes (PR and push) to the python binding
   # source/configuration files, except on the release branches, which

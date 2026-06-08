@@ -15,6 +15,7 @@ name: CI
 # - changes to workflows other than this one
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '**'
