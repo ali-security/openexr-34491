@@ -41,7 +41,11 @@ fi
 
 cat $pkgconfig
 
-export PKG_CONFIG_PATH=$(dirname $pkgconfig)
+# OpenEXR.pc has "Requires: Imath", but the ASWF CI images install the system
+# Imath under /usr/local, which is off pkg-config's default search path. Locate
+# its Imath.pc and add it so the OpenEXR --cflags/--libs resolution succeeds.
+imath_pc=$(find / -name Imath.pc 2>/dev/null | head -1)
+export PKG_CONFIG_PATH=$(dirname $pkgconfig)${imath_pc:+:$(dirname $imath_pc)}
 
 # Build the validation program
 
