@@ -172,7 +172,7 @@ jobs:
             compiler-desc: gcc11.2.1
             label: 
             threads-enabled: 'ON'
-            vfx-cy: 2023
+            vfx-cy: 2024
             exclude-tests:
 
           # -------------------------------------------------------------------
@@ -188,7 +188,7 @@ jobs:
             compiler-desc: gcc9.3.1
             label: 
             threads-enabled: 'ON'
-            vfx-cy: 2022
+            vfx-cy: 2024
             exclude-tests:
 
           # -------------------------------------------------------------------
@@ -204,7 +204,7 @@ jobs:
             compiler-desc: gcc9.3.1
             label: 
             threads-enabled: 'ON'
-            vfx-cy: 2021
+            vfx-cy: 2024
             exclude-tests:
 
     env:
@@ -325,9 +325,9 @@ jobs:
             threads-enabled: 'ON'
             compiler-desc: AppleClang11.0
             cxx-standard: 17
-            osver: 13
+            osver: 14
             exclude-tests:
-            vfx-cy: 23
+            vfx-cy: 24
 
           # -------------------------------------------------------------------
           # MacOS 12
@@ -339,9 +339,9 @@ jobs:
             threads-enabled: 'ON'
             compiler-desc: AppleClang10.5
             cxx-standard: 17
-            osver: 12
+            osver: 14
             exclude-tests:
-            vfx-cy: 23
+            vfx-cy: 24
 
 
     steps:
